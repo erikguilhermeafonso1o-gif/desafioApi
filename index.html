@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Formulário de cadastro com busca de endereço pelo CEP."
+    />
+    <title>Cadastro de usuário</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <section class="card" aria-labelledby="page-title">
+        <header class="card__header">
+          <p class="eyebrow">Seus dados, com praticidade</p>
+          <h1 id="page-title">Cadastro de usuário</h1>
+          <p>Informe seu CEP para preencher o endereço automaticamente.</p>
+        </header>
+
+        <form id="registration-form">
+          <div class="field">
+            <label for="name">Nome completo</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="address-heading">
+            <h2>Endereço</h2>
+            <a
+              href="https://buscacepinter.correios.com.br/app/endereco/index.php"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Não sei meu CEP</a>
+          </div>
+
+          <div class="field">
+            <label for="cep">CEP</label>
+            <input
+              id="cep"
+              name="cep"
+              type="text"
+              inputmode="numeric"
+              autocomplete="postal-code"
+              maxlength="9"
+              placeholder="00000-000"
+              aria-describedby="form-status"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="street">Logradouro</label>
+            <input id="street" name="street" type="text" autocomplete="address-line1" />
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="number">Número</label>
+              <input id="number" name="number" type="text" autocomplete="address-line2" />
+            </div>
+            <div class="field">
+              <label for="complement">Complemento</label>
+              <input id="complement" name="complement" type="text" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="neighborhood">Bairro</label>
+            <input id="neighborhood" name="neighborhood" type="text" />
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="city">Cidade</label>
+              <input id="city" name="city" type="text" autocomplete="address-level2" />
+            </div>
+            <div class="field field--state">
+              <label for="state">UF</label>
+              <input
+                id="state"
+                name="state"
+                type="text"
+                maxlength="2"
+                autocomplete="address-level1"
+              />
+            </div>
+          </div>
+
+          <p id="form-status" class="status" role="status" aria-live="polite"></p>
+          <button type="submit">Salvar cadastro</button>
+          <p class="privacy-note">Seus dados ficam salvos apenas neste navegador.</p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

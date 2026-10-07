@@ -1,0 +1,17 @@
+{
+  "name": "desafioapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "desafio.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@langchain/langgraph": "^1.4.19",
+    "@langchain/openai": "^1.6.2",
+    "dotenv": "^18.0.5",
+    "zod": "^4.6.5"
+  }
+}
